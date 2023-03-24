@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "khinsider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/llsc12/Khinsider",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c09ba134c14818bd2e4c51336e206deaeba5f6e1"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
+        "version" : "1.2.2"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup",
+      "state" : {
+        "revision" : "f707b8680cddb96dc1855632340a572ef37bbb98",
+        "version" : "2.5.3"
+      }
+    },
+    {
+      "identity" : "swifttui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rensbreur/SwiftTUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e96f51d7bd1943012b5ad290860bc83a6aafefab"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA2F2DA329CD163C0094F38F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F2DA229CD163C0094F38F /* main.swift */; };
+		AA2F2DA329CD163C0094F38F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F2DA229CD163C0094F38F /* App.swift */; };
+		AA2F2DB029CD16730094F38F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F2DAF29CD16730094F38F /* main.swift */; };
+		AA2F2DB629CD16E50094F38F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = AA2F2DB529CD16E50094F38F /* ArgumentParser */; };
+		AA2F2DBC29CD172D0094F38F /* Khinsider in Frameworks */ = {isa = PBXBuildFile; productRef = AA2F2DBB29CD172D0094F38F /* Khinsider */; };
+		AA2F2DBF29CD17370094F38F /* Khinsider in Frameworks */ = {isa = PBXBuildFile; productRef = AA2F2DBE29CD17370094F38F /* Khinsider */; };
+		AA2F2DC129CD178C0094F38F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F2DC029CD178C0094F38F /* ContentView.swift */; };
+		AA2F2DC429CD35F10094F38F /* SwiftTUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA2F2DC329CD35F10094F38F /* SwiftTUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +26,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		AA2F2DAB29CD16730094F38F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA2F2D9F29CD163C0094F38F /* KhinsiderDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KhinsiderDL; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA2F2DA229CD163C0094F38F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA2F2D9F29CD163C0094F38F /* khinsider-dl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "khinsider-dl"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2F2DA229CD163C0094F38F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		AA2F2DAD29CD16730094F38F /* khinsider-dlui */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "khinsider-dlui"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2F2DAF29CD16730094F38F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA2F2DC029CD178C0094F38F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2F2DBC29CD172D0094F38F /* Khinsider in Frameworks */,
+				AA2F2DB629CD16E50094F38F /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2F2DAA29CD16730094F38F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2F2DBF29CD17370094F38F /* Khinsider in Frameworks */,
+				AA2F2DC429CD35F10094F38F /* SwiftTUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,14 +71,17 @@
 			isa = PBXGroup;
 			children = (
 				AA2F2DA129CD163C0094F38F /* KhinsiderDL */,
+				AA2F2DAE29CD16730094F38F /* KhinsiderDLUI */,
 				AA2F2DA029CD163C0094F38F /* Products */,
+				AA2F2DBD29CD17370094F38F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		AA2F2DA029CD163C0094F38F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA2F2D9F29CD163C0094F38F /* KhinsiderDL */,
+				AA2F2D9F29CD163C0094F38F /* khinsider-dl */,
+				AA2F2DAD29CD16730094F38F /* khinsider-dlui */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,17 +89,33 @@
 		AA2F2DA129CD163C0094F38F /* KhinsiderDL */ = {
 			isa = PBXGroup;
 			children = (
-				AA2F2DA229CD163C0094F38F /* main.swift */,
+				AA2F2DA229CD163C0094F38F /* App.swift */,
 			);
 			path = KhinsiderDL;
+			sourceTree = "<group>";
+		};
+		AA2F2DAE29CD16730094F38F /* KhinsiderDLUI */ = {
+			isa = PBXGroup;
+			children = (
+				AA2F2DAF29CD16730094F38F /* main.swift */,
+				AA2F2DC029CD178C0094F38F /* ContentView.swift */,
+			);
+			path = KhinsiderDLUI;
+			sourceTree = "<group>";
+		};
+		AA2F2DBD29CD17370094F38F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA2F2D9E29CD163C0094F38F /* KhinsiderDL */ = {
+		AA2F2D9E29CD163C0094F38F /* khinsider-dl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA2F2DA629CD163C0094F38F /* Build configuration list for PBXNativeTarget "KhinsiderDL" */;
+			buildConfigurationList = AA2F2DA629CD163C0094F38F /* Build configuration list for PBXNativeTarget "khinsider-dl" */;
 			buildPhases = (
 				AA2F2D9B29CD163C0094F38F /* Sources */,
 				AA2F2D9C29CD163C0094F38F /* Frameworks */,
@@ -77,9 +125,34 @@
 			);
 			dependencies = (
 			);
-			name = KhinsiderDL;
+			name = "khinsider-dl";
+			packageProductDependencies = (
+				AA2F2DB529CD16E50094F38F /* ArgumentParser */,
+				AA2F2DBB29CD172D0094F38F /* Khinsider */,
+			);
 			productName = KhinsiderDL;
-			productReference = AA2F2D9F29CD163C0094F38F /* KhinsiderDL */;
+			productReference = AA2F2D9F29CD163C0094F38F /* khinsider-dl */;
+			productType = "com.apple.product-type.tool";
+		};
+		AA2F2DAC29CD16730094F38F /* khinsider-dlui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2F2DB129CD16730094F38F /* Build configuration list for PBXNativeTarget "khinsider-dlui" */;
+			buildPhases = (
+				AA2F2DA929CD16730094F38F /* Sources */,
+				AA2F2DAA29CD16730094F38F /* Frameworks */,
+				AA2F2DAB29CD16730094F38F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "khinsider-dlui";
+			packageProductDependencies = (
+				AA2F2DBE29CD17370094F38F /* Khinsider */,
+				AA2F2DC329CD35F10094F38F /* SwiftTUI */,
+			);
+			productName = KhinsiderDLUI;
+			productReference = AA2F2DAD29CD16730094F38F /* khinsider-dlui */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -95,6 +168,9 @@
 					AA2F2D9E29CD163C0094F38F = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					AA2F2DAC29CD16730094F38F = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = AA2F2D9A29CD163C0094F38F /* Build configuration list for PBXProject "KhinsiderDL" */;
@@ -106,11 +182,17 @@
 				Base,
 			);
 			mainGroup = AA2F2D9629CD163C0094F38F;
+			packageReferences = (
+				AA2F2DB429CD16E50094F38F /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				AA2F2DBA29CD172D0094F38F /* XCRemoteSwiftPackageReference "Khinsider" */,
+				AA2F2DC229CD35F10094F38F /* XCRemoteSwiftPackageReference "SwiftTUI" */,
+			);
 			productRefGroup = AA2F2DA029CD163C0094F38F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA2F2D9E29CD163C0094F38F /* KhinsiderDL */,
+				AA2F2D9E29CD163C0094F38F /* khinsider-dl */,
+				AA2F2DAC29CD16730094F38F /* khinsider-dlui */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA2F2DA329CD163C0094F38F /* main.swift in Sources */,
+				AA2F2DA329CD163C0094F38F /* App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2F2DA929CD16730094F38F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2F2DC129CD178C0094F38F /* ContentView.swift in Sources */,
+				AA2F2DB029CD16730094F38F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +353,28 @@
 			};
 			name = Release;
 		};
+		AA2F2DB229CD16730094F38F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 566RT33SA2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA2F2DB329CD16730094F38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 566RT33SA2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -274,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA2F2DA629CD163C0094F38F /* Build configuration list for PBXNativeTarget "KhinsiderDL" */ = {
+		AA2F2DA629CD163C0094F38F /* Build configuration list for PBXNativeTarget "khinsider-dl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA2F2DA729CD163C0094F38F /* Debug */,
@@ -283,7 +396,66 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AA2F2DB129CD16730094F38F /* Build configuration list for PBXNativeTarget "khinsider-dlui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2F2DB229CD16730094F38F /* Debug */,
+				AA2F2DB329CD16730094F38F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA2F2DB429CD16E50094F38F /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AA2F2DBA29CD172D0094F38F /* XCRemoteSwiftPackageReference "Khinsider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/llsc12/Khinsider";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		AA2F2DC229CD35F10094F38F /* XCRemoteSwiftPackageReference "SwiftTUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rensbreur/SwiftTUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA2F2DB529CD16E50094F38F /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2F2DB429CD16E50094F38F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		AA2F2DBB29CD172D0094F38F /* Khinsider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2F2DBA29CD172D0094F38F /* XCRemoteSwiftPackageReference "Khinsider" */;
+			productName = Khinsider;
+		};
+		AA2F2DBE29CD17370094F38F /* Khinsider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2F2DBA29CD172D0094F38F /* XCRemoteSwiftPackageReference "Khinsider" */;
+			productName = Khinsider;
+		};
+		AA2F2DC329CD35F10094F38F /* SwiftTUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2F2DC229CD35F10094F38F /* XCRemoteSwiftPackageReference "SwiftTUI" */;
+			productName = SwiftTUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA2F2D9729CD163C0094F38F /* Project object */;
 }
