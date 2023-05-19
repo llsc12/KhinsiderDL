@@ -29,7 +29,39 @@ struct KhinsiderDL: AsyncParsableCommand {
     print("Searching for album...")
     guard let album = try await Khinsider.album(from: url) else { throw ValidationError("Couldn't find album.") }
     print("Found \(album.title), getting tracks...")
-    guard let sourceUrls = try await album.allSourceLinks(format) else { throw ValidationError("Couldn't get album download links.") }
+		
+		let quality: Khinsider.KHAlbum.Format = await {
+			if
+				let formats = try? await album.availableFormats,
+				formats.contains(.flac)
+			{
+				print("Downloading as flac...")
+				return .flac
+			} else {
+				print("Flac not available, downloading as mp3...")
+				return .mp3
+			}
+		}()
+    
+    let sourceUrls = await withTaskGroup(of: URL?.self) { group in
+      try? await album.tracks.forEach { track in
+        group.addTask {
+          print("Scraping \(track.title)")
+          return await track.getSourceLink(quality)
+        }
+      }
+      
+      var collected = [URL]()
+      
+      for await value in group {
+        if let value {
+          collected.append(value)
+        }
+      }
+      
+      return collected
+    }
+    
     print("Downloading \(sourceUrls.count) tracks.")
     
     sourceUrls.forEach { url in

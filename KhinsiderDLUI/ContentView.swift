@@ -84,7 +84,8 @@ struct ContentView: View {
       {
         quality = .flac
         conPrint("Downloading as flac...")
-      } else { conPrint("Downloading as mp3...") }
+      } else { conPrint("Flac not available, downloading as mp3...") }
+      conPrint("Scraping all tracks... This might take a while.")
       guard let links = try? await album.allSourceLinks(quality) else {
         conPrint("[Fail] Failed to get tracks from album.")
         isDownloading = false
